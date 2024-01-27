@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Clone the GitHub repository
 RUN apt-get update && apt-get install -y git
+RUN git clone https://github.com/galsal815/final-python.git .
 #RUN git clone https://github.com/lidorg-dev/final-python.git .
 
 # Install any needed packages specified in requirements.txt
