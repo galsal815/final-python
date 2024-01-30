@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+hooks:
+  AfterInstall:
+    - location: scripts/install.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/start_app.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStop:
+    - location: scripts/stop_app.sh
+      timeout: 600
+      runas: ec2-user
